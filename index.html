@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CourierPro - Courier Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login / Register -->
+  <div id="auth">
+    <div class="card auth-box">
+      <h1>📬 CourierPro</h1>
+      <div class="tabs">
+        <button type="button" class="on" data-t="login">Login</button>
+        <button type="button" data-t="register">Register</button>
+      </div>
+      <form id="authForm">
+        <input id="aName" placeholder="Full name" hidden>
+        <input id="aEmail" type="email" placeholder="Email" required>
+        <input id="aPass" type="password" placeholder="Password" required minlength="4">
+        <button class="btn" id="aBtn">Login</button>
+        <p class="hint">Demo: admin@courierpro.com / admin123</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- App -->
+  <div id="app" hidden>
+    <nav class="sidebar" id="sidebar">
+      <div class="brand">📬 CourierPro</div>
+      <ul id="nav"></ul>
+    </nav>
+    <main class="main-content">
+      <header class="top-bar">
+        <button id="menu" class="icon" aria-label="Menu">☰</button>
+        <h2 id="title"></h2>
+        <div class="spacer"></div>
+        <button id="theme" class="icon" aria-label="Dark mode">🌙</button>
+        <span id="user"></span>
+        <button id="logout" class="btn sm">Logout</button>
+      </header>
+      <div id="pages"></div>
+    </main>
+  </div>
+
+  <!-- Add / Edit modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="card"><h3 id="mTitle"></h3><form id="mForm"></form></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
